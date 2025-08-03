@@ -1013,7 +1013,7 @@
 			// Set the character name in the loading message
 			loadingCharName.textContent = char;
 
-			const apiKey = localStorage.getItem('geminiApiKey');
+			const apiKey = localStorage.getItem('gemini.api-key');
 
 			if (!apiKey) {
 				llmLoadingContainer.innerHTML = `
@@ -1331,7 +1331,7 @@
 			}
 
 			// Load API key from local storage on load
-			const savedApiKey = localStorage.getItem('geminiApiKey');
+			const savedApiKey = localStorage.getItem('gemini.api-key');
 			if (savedApiKey) {
 				geminiApiKeyInput.value = savedApiKey;
 			}
@@ -1387,7 +1387,7 @@
 		});
 
 		geminiApiKeyInput.addEventListener('input', () => {
-			localStorage.setItem('geminiApiKey', geminiApiKeyInput.value);
+			localStorage.setItem('gemini.api-key', geminiApiKeyInput.value);
 		});
 	</script>
 </body>
